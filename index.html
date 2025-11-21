@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <div class="background-graffiti"> 
+        <div class="photobooth-container">
+            
+            
+            <div class="video-wrapper">
+                <video id="videoElement" autoplay></video>
+                <div id="countdown" class="countdown-overlay"></div>
+            </div>
+
+            <div class="controls">
+                <div class="filter-options">
+                    <label><input type="radio" name="filter" value="none" checked> Filtresiz</label>
+                    <label><input type="radio" name="filter" value="grayscale"> Siyah Beyaz</label>
+                    <label><input type="radio" name="filter" value="sepia"> Sepya</label>
+                </div>
+                <button id="startButton">BAŞLA</button> 
+            </div>
+            
+            <canvas id="canvasElement" style="display:none;"></canvas>
+            <canvas id="stripCanvas" style="display:none;"></canvas>
+            
+            <div class="gallery">
+                <h2>Çekilen Kareler</h2>
+                <div id="photos"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
