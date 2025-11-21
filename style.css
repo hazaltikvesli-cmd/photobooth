@@ -24,16 +24,7 @@ body {
 }
 
 /* Ortadaki dikdörtgen boşluğu simüle eden alan (Görseli merkeze almak için) */
-.background-graffiti::before {
-    content: '';
-    position: absolute;
-    width: 450px; 
-    height: 550px; 
-    background-color: rgba(0, 0, 0, 0.6); /* Daha koyu şeffaflık */
-    border: 5px solid #333; 
-    box-shadow: 0 0 15px rgba(0,0,0,0.8);
-    z-index: 1; 
-}
+
 
 
 .photobooth-container {
