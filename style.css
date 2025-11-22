@@ -74,7 +74,7 @@ h1 {
     width: 250px; /* Dikdörtgenin genişliği */
     height: 350px; /* Dikdörtgenin yüksekliği */
     margin: 0; /* Otomatik marjinleri sıfırla */
-    border: 3px solid #ccc; /* Kenarlık rengi ve kalınlığı */
+    border: 3px solid #000; /* Kenarlık rengi ve kalınlığı */
     box-shadow: 0 0 10px rgba(255,255,255,0.3);
     background-color: #000;
     display: flex;
@@ -82,7 +82,7 @@ h1 {
     align-items: center;
     overflow: hidden;
     /* Görseldeki dikdörtgenin etrafındaki graffitiye uyacak şekilde döndürme */
-    transform: rotate(0deg); /* İhtiyaca göre açıyı ayarlayın */
+
     z-index: 10; /* Diğer içeriğin üstünde olsun */
 }
 
