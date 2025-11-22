@@ -1,60 +1,49 @@
-body {
-    body, html {
-    /* Kaydırmayı sadece görselin boyutlarıyla sınırlamak için */
+/* 1. BODY ve HTML: Tüm sayfayı kapla ve arka plan görselini uygula */
+body, html {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     /* İstenmeyen ekstra kaydırmayı engeller */
-    overflow-x: hidden; 
+    overflow: hidden; 
 }
 
-.photobooth-background {
-    /* HTML yapınızdaki bu görseli içeren ana div/eleman */
-    /* Görselin kendisi değil, görseli taşıyan kapsayıcı */
-    width: 100vw; /* Viewport genişliğinin tamamı */
-    height: 100vh; /* Viewport yüksekliğinin tamamı */
-    
-    /* Arka Plan Görselini Uygulama */
-    background-image: url('photobooth3.png');
-    background-size: cover; /* veya contain, detaylar aşağıda */
-    background-repeat: no-repeat;
-    
-    /* Görselin ortalanması */
-    background-position: center center;
-    
-    /* Eğer görselin kendisinin boyutu, tarayıcı penceresinden büyükse */
-    /* Kaydırma çubuğunun sadece bu alanda oluşmasını sağlar */
-    overflow-y: scroll; 
-    
-    /* İçerik de bu kapsayıcının içine yerleştirilmeli */
-}
-    font-family: Arial, sans-serif; /* Sade font */
-    background-color: #1a1a1a;
+body {
+    font-family: Arial, sans-serif;
     color: #eee;
+    
+    /* Arka Plan Görseli */
+    background-image: url('photobooth3.jpg'); /* Görselin adı güncellendi */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Görselin sabit kalmasını sağlar */
+    
+    /* Ana İçeriği Ortalamak için Flexbox */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    overflow: hidden;
 }
 
-
+/* 2. PHOTOCONTAINER: İçeriği arka planın üstüne yerleştir */
 .photobooth-container {
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(26, 26, 26, 0.7); /* Yarı saydam arka plan */
     padding: 30px;
     text-align: center;
     max-width: 800px; 
     width: 90%;
     z-index: 2; 
     backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    overflow-y: auto; /* İçerik taşarsa kaydırma çubuğu çıksın */
+    max-height: 90vh; /* Ekranı aşırı doldurmayı engelle */
 }
 
-/* Başlık Sadeleştirildi */
+/* Başlık */
 h1 {
-    color: #c9c9c9; /* Açık gri, sade renk */
-    text-shadow: none; /* Neon efekti kaldırıldı */
+    color: #c9c9c9;
+    text-shadow: none; 
     border-bottom: 2px solid #555;
     padding-bottom: 15px;
     margin-bottom: 20px;
@@ -112,7 +101,7 @@ h1 {
 .filter-options {
     display: flex;
     gap: 20px;
-    color: #c9c9c9; /* Yazı rengi sadeleştirildi */
+    color: #c9c9c9;
 }
 
 .filter-options label {
@@ -129,24 +118,31 @@ h1 {
 
 .filter-options input[type="radio"] {
     margin-right: 5px;
-    accent-color: #a0a0a0; /* Radyo buton rengi sadeleştirildi */
+    accent-color: #a0a0a0;
 }
 
-/* Başlat Butonu Sadeleştirildi */
+/* Başlat Butonu */
 #startButton {
-    background-color: transparent; /* Arkaplan yok */
-    color: white; /* Beyaz yazı */
-    border: none; /* Kenarlık yok */
-    padding: 0; /* Boşluk yok */
-    cursor: pointer; /* Fare imleci el işareti */
-    font-size: 1.2em;
+    background-color: #4CAF50; /* Yeşil buton */
+    color: white; 
+    border: none; 
+    padding: 10px 25px; 
+    cursor: pointer; 
+    font-size: 1.5em;
     font-weight: bold;
-    /* transition ve box-shadow gibi görsel efektler kaldırıldı */
+    border-radius: 5px;
+    box-shadow: 0 4px #2e8b57;
+    transition: all 0.2s;
 }
 
 #startButton:hover {
-    background-color: #3040a0;
-    transform: translateY(-2px);
+    background-color: #45a049;
+}
+
+#startButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #2e8b57;
+    transform: translateY(2px);
 }
 
 .gallery {
@@ -155,7 +151,7 @@ h1 {
     padding-top: 20px;
 }
 
-/* Galeri Başlığı Sadeleştirildi */
+/* Galeri Başlığı */
 .gallery h2 {
     color: #c9c9c9;
     font-size: 1.8em;
@@ -188,9 +184,9 @@ h1 {
     display: block;
 }
 
-/* İndirme Butonu Sadeleştirildi */
+/* İndirme Butonu */
 .download-button {
-    background-color: #607d8b; /* Daha sade, gri-mavi ton */
+    background-color: #607d8b;
     color: white;
     padding: 5px 10px;
     border: none;
