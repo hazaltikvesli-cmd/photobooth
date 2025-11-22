@@ -13,20 +13,34 @@ body {
     color: #eee;
     
     /* Arka Plan Görseli */
-    background-image: url('photobooth3.png');
-    background-size: contain; /* Görselin boyutunu koru */
-    background-repeat: no-repeat; /* Görseli tekrar et */
-    background-position: center center;
-    background-attachment: fixed;/* En üst sol köşeden başla */
-    /* background-attachment: fixed;  Kaldırıldı, kaydırılabilir olması için */
+   
+    /* 1. Görseli tanımla */
+    background-image: url('photobooth3.jpg'); 
     
+    /* 2. Tekrar etmeyi engelle */
+    background-repeat: no-repeat;
+    
+    /* 3. Ekranı kaplayana kadar büyüt (İstediğiniz "cover" özelliği) */
+    background-size: cover;
+    
+    /* 4. Görselin içerikle birlikte kaymasını sağla (Sizin İsteğiniz) */
+    background-attachment: scroll; 
+    /* "scroll" varsayılan değerdir, ancak açıkça belirtmek iyi olur. */
+    
+    /* 5. (Önemli) İçerik kısa olsa bile ilk görünür ekranı kaplamasını sağla */
+    min-height: 100vh; 
+    
+    /* Sayfa kenarlarındaki boşlukları kaldırmak için */
+    margin: 0;
+    padding: 0;
+
     /* Ana İçeriği Ortalamak için Flexbox */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow-y: scroll; /* Sayfa içeriği taştığında kaydırma çubuğu çıksın */
-}
+
 
 /* 2. PHOTOCONTAINER: İçeriği arka planın üstüne yerleştir */
 .photobooth-container {
