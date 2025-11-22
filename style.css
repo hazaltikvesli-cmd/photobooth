@@ -37,10 +37,10 @@ body, html {
 
 .video-wrapper {
     position: absolute; /* .photobooth-container içine konumlandır */
-    top: 136px; /* Görseldeki dikdörtgenin üst kenarına göre ayarlayın */
-    left: 674px; /* Görseldeki dikdörtgenin sol kenarına göre ayarlayın */
-    width: 314px; /* Dikdörtgenin genişliği */
-    height: 428px; /* Dikdörtgenin yüksekliği */
+    top: 119px; /* Görseldeki dikdörtgenin üst kenarına göre ayarlayın */
+    left: 600px; /* Görseldeki dikdörtgenin sol kenarına göre ayarlayın */
+    width: 318px; /* Dikdörtgenin genişliği */
+    height: 437px; /* Dikdörtgenin yüksekliği */
     margin: 0; /* Otomatik marjinleri sıfırla */
     border: 3px solid #000; /* Kenarlık rengi ve kalınlığı */
     box-shadow: 0 0 10px rgba(255,255,255,0.3);
