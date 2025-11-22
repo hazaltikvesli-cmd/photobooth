@@ -153,7 +153,7 @@ function createPhotoStrip() {
             // Oranı koruyarak fotoğrafı çiz
             const aspectRatio = img.width / img.height;
             const drawWidth = stripWidth;
-            const drawHeight = stripWidth / aspectRatio; // Genişliğe göre yüksekliği ayarla
+            let drawHeight = stripWidth / aspectRatio; 
 
             // Eğer fotoğraf şerit yüksekliğinden daha yüksekse, sığdır
             if (drawHeight > singlePhotoHeight) {
@@ -163,7 +163,10 @@ function createPhotoStrip() {
                 const newWidth = singlePhotoHeight * newAspectRatio;
                 stripContext.drawImage(img, (stripWidth - newWidth) / 2, yOffset + (singlePhotoHeight - newHeight) / 2, newWidth, newHeight);
             } else {
-                stripContext.drawImage(img, 0, yOffset, drawWidth, drawHeight);
+                // Genişliğe sığdır, ortala
+                let x = (stripWidth - drawWidth) / 2;
+                let y = yOffset + (singlePhotoHeight - drawHeight) / 2;
+                stripContext.drawImage(img, x, y, drawWidth, drawHeight);
             }
             
             yOffset += singlePhotoHeight;
