@@ -85,7 +85,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-top: 600px; /* Video-wrapper'ın altına düşmesi için ayarlayın */
+    margin-top: 631px; /* Video-wrapper'ın altına düşmesi için ayarlayın */
     margin-bottom: 30px;
     position: relative; /* Filter seçenekleri için */
     z-index: 15; /* Diğer öğelerin üzerinde olsun */
