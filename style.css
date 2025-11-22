@@ -42,30 +42,8 @@ body {
     overflow-y: scroll; /* Sayfa içeriği taştığında kaydırma çubuğu çıksın */
 
 
-/* 2. PHOTOCONTAINER: İçeriği arka planın üstüne yerleştir */
-.photobooth-container {
-    /* background-color: rgba(26, 26, 26, 0.7);  Kaldırıldı */
-    padding: 30px;
-    text-align: center;
-    max-width: 800px; 
-    width: 90%;
-    z-index: 2; 
-    /* backdrop-filter: blur(5px);  Kaldırıldı */
-    border-radius: 10px;
-    /* overflow-y: auto; Bu kuralı body'ye taşıdık, burada kalabilir ama body daha genel */
-    max-height: 90vh; /* Ekranı aşırı doldurmayı engelle */
-    position: relative; /* video-wrapper'ın konumlandırması için */
-}
 
-/* Başlık */
-h1 {
-    color: #c9c9c9;
-    text-shadow: none; 
-    border-bottom: 2px solid #555;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    font-size: 2.5em;
-}
+
 
 .video-wrapper {
     position: absolute; /* .photobooth-container içine konumlandır */
