@@ -13,7 +13,7 @@ body, html {
     color: #eee;
     
     /* Arka Plan Görseli */
-    background-image: url('photobooth3.png'); 
+    background-image: url('photobooth.png'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll; 
@@ -39,8 +39,8 @@ body, html {
     position: absolute; /* .photobooth-container içine konumlandır */
     top: 96px; /* Görseldeki dikdörtgenin üst kenarına göre ayarlayın */
     left: 324px; /* Görseldeki dikdörtgenin sol kenarına göre ayarlayın */
-    width: 234px; /* Dikdörtgenin genişliği */
-    height: 303px; /* Dikdörtgenin yüksekliği */
+    width: 314px; /* Dikdörtgenin genişliği */
+    height: 428px; /* Dikdörtgenin yüksekliği */
     margin: 0; /* Otomatik marjinleri sıfırla */
     border: 3px solid #000; /* Kenarlık rengi ve kalınlığı */
     box-shadow: 0 0 10px rgba(255,255,255,0.3);
