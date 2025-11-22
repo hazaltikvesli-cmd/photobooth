@@ -14,9 +14,10 @@ body {
     
     /* Arka Plan Görseli */
     background-image: url('photobooth3.png');
-    background-size: auto; /* Görselin boyutunu koru */
-    background-repeat: repeat; /* Görseli tekrar et */
-    background-position: top left; /* En üst sol köşeden başla */
+    background-size: contain; /* Görselin boyutunu koru */
+    background-repeat: no-repeat; /* Görseli tekrar et */
+    background-position: center center;
+    background-attachment: fixed;/* En üst sol köşeden başla */
     /* background-attachment: fixed;  Kaldırıldı, kaydırılabilir olması için */
     
     /* Ana İçeriği Ortalamak için Flexbox */
@@ -24,7 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow-y: auto; /* Sayfa içeriği taştığında kaydırma çubuğu çıksın */
+    overflow-y: scroll; /* Sayfa içeriği taştığında kaydırma çubuğu çıksın */
 }
 
 /* 2. PHOTOCONTAINER: İçeriği arka planın üstüne yerleştir */
