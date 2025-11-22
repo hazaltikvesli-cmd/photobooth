@@ -13,7 +13,7 @@ body {
     color: #eee;
     
     /* Arka Plan Görseli */
-    background-image: url('photobooth3.jpg'); /* Görselin adı güncellendi */
+    background-image: url('photobooth3.png'); /* Görselin adı güncellendi */
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center;
