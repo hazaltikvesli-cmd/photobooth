@@ -143,6 +143,12 @@ function createPhotoStrip() {
     stripContext.fillStyle = '#000';
     stripContext.fillRect(0, 0, stripWidth, stripHeight);
 
+    // Çerçeve kalınlığı
+    const borderWidth = 5; 
+    stripContext.strokeStyle = '#000'; // Çerçeve rengi siyah
+    stripContext.lineWidth = borderWidth;
+
+
     let yOffset = 0;
     let loadedImages = 0;
 
@@ -169,6 +175,9 @@ function createPhotoStrip() {
                 stripContext.drawImage(img, x, y, drawWidth, drawHeight);
             }
             
+            // Her fotoğrafın etrafına siyah çerçeve çiz (indirme için)
+            stripContext.strokeRect(0, yOffset, stripWidth, singlePhotoHeight);
+
             yOffset += singlePhotoHeight;
             loadedImages++;
 
