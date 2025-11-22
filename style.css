@@ -13,7 +13,7 @@ body {
     color: #eee;
     
     /* Arka Plan Görseli */
-    background-image: url('photobooth3.jpg');
+    background-image: url('photobooth3.png');
     background-size: auto; /* Görselin boyutunu koru */
     background-repeat: repeat; /* Görseli tekrar et */
     background-position: top left; /* En üst sol köşeden başla */
