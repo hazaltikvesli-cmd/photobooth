@@ -61,7 +61,7 @@ function startCountdown(callback) {
             countdownOverlay.textContent = count;
         } else {
             clearInterval(timer);
-            countdownOverlay.textContent = 'Çek!';
+            countdownOverlay.textContent = 'Snap!';
             setTimeout(() => {
                 countdownOverlay.style.display = 'none'; // Geri sayımı gizle
                 callback(); // Fotoğraf çekme işlevini çağır
