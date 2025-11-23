@@ -71,7 +71,7 @@ body, html {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    font-size: 8em;
+    font-size: 6em;
     display: flex;
     justify-content: center;
     align-items: center;
