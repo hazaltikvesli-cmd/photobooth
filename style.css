@@ -36,22 +36,24 @@ body, html {
 
 
 .video-wrapper {
-    position: absolute; /* .photobooth-container içine konumlandır */
-    top: 121px; /* Görseldeki dikdörtgenin üst kenarına göre ayarlayın */
-    left: 600px; /* Görseldeki dikdörtgenin sol kenarına göre ayarlayın */
-    width: 318px; /* Dikdörtgenin genişliği */
-    height: 437px; /* Dikdörtgenin yüksekliği */
-    margin: 0; /* Otomatik marjinleri sıfırla */
-    border: 3px solid #000; /* Kenarlık rengi ve kalınlığı */
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* Görseldeki dikdörtgenin etrafındaki graffitiye uyacak şekilde döndürme */
-
-    z-index: 10; /* Diğer içeriğin üstünde olsun */
+    position: absolute; /* Mutlak konumlandırmayı koru */
+    /* Yeni Merkezleme Kodu */
+    top: 50%; /* Üst kenarı ekranın %50'sine (yarısına) taşı */
+    left: 50%; /* Sol kenarı ekranın %50'sine (yarısına) taşı */
+    transform: translate(-50%, -50%); /* Öğeyi kendi genişlik ve yüksekliğinin yarısı kadar geri çek */
+    
+    /* Diğer özellikler değişmedi */
+    width: 318px; 
+    height: 437px; 
+    margin: 0; 
+    border: 3px solid #000; 
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10; 
 }
 
 #videoElement {
