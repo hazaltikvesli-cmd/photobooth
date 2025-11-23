@@ -37,7 +37,7 @@ body, html {
 
 .video-wrapper {
     position: absolute; /* .photobooth-container içine konumlandır */
-    top: 119px; /* Görseldeki dikdörtgenin üst kenarına göre ayarlayın */
+    top: 121px; /* Görseldeki dikdörtgenin üst kenarına göre ayarlayın */
     left: 600px; /* Görseldeki dikdörtgenin sol kenarına göre ayarlayın */
     width: 318px; /* Dikdörtgenin genişliği */
     height: 437px; /* Dikdörtgenin yüksekliği */
