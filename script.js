@@ -116,7 +116,9 @@ startButton.addEventListener('click', () => {
     photosTaken = []; // Yeni çekime başlamadan önce diziyi temizle
 
     let photoCount = 0;
-    const interval = setInterval(() => {
+    
+    // **1. ADIM: İlk fotoğraf için geri sayımı hemen başlatın**
+    const takeNextPhoto = () => {
         if (photoCount < 4) {
             startCountdown(() => {
                 takePhoto(currentFilter);
@@ -127,7 +129,17 @@ startButton.addEventListener('click', () => {
                 }
             });
         }
-    }, 5000); // Her fotoğraf çekimi arasında 4 saniye geri sayım + 1 saniye bekleme
+    };
+
+    // İlk fotoğraf çekimi hemen başlasın (gecikmesiz)
+    takeNextPhoto();
+
+    // **2. ADIM: Sonraki fotoğraflar için 5000ms'de bir tekrarlayın**
+    const interval = setInterval(takeNextPhoto, 5000); 
+    
+    // NOT: İlk fotoğraf için geri sayım 4 saniye sürer, 
+    // sonra 500ms "Snap!" yazısı kalır. Toplam 4.5 saniye.
+    // Bu aralık ile, her fotoğraf arasında yaklaşık 500ms boşluk olur.
 });
 
 // Fotoğraf şeridini oluşturma
